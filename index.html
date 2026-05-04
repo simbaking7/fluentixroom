@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fuentix Room | Online Classes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .hero-bg { 
+      background: linear-gradient(rgba(171, 169, 133, 0.9), rgba(159, 18, 57, 0.85)), 
+                  url('https://source.unsplash.com/random/1920x1080/?teaching') center/cover no-repeat; 
+    }
+    .logo-hover:hover { transform: scale(1.08) rotate(4deg); }
+    .subject-card { transition: all 0.3s ease; }
+    .subject-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+  </style>
+</head>
+<body class="bg-[#F5F0E6] text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <img src="https://i.postimg.cc/gjLt5fsX/fluentix-logo-no-outer-bg.png" alt="Fuentix Room" class="h-16 w-16 logo-hover"/>
+        <div>
+          <h1 class="text-3xl font-bold text-[#0F766E]">Fuentix Room</h1>
+          <p class="text-sm text-gray-500">Since 2026 • FRM</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-6">
+        <div class="flex gap-2">
+          <img src="https://flagcdn.com/w40/za.png" alt="South Africa" class="h-6">
+          <img src="https://flagcdn.com/w40/mz.png" alt="Mozambique" class="h-6">
+        </div>
+        <div class="hidden md:flex gap-8 font-medium">
+          <a href="#about" class="hover:text-[#0F766E]">About</a>
+          <a href="#classes" class="hover:text-[#0F766E]">Classes</a>
+          <a href="#pricing" class="hover:text-[#0F766E]">Pricing</a>
+        </div>
+      </div>
+      <button id="hamburger" class="md:hidden text-3xl"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-bg h-screen flex items-center text-white text-center">
+    <div class="max-w-5xl mx-auto px-6">
+      <img src="https://i.postimg.cc/gjLt5fsX/fluentix-logo-no-outer-bg.png" alt="Logo" class="mx-auto h-44 mb-6 logo-hover"/>
+      <h2 class="text-5xl md:text-6xl font-bold mb-6">Fuentix Room</h2>
+      <p class="text-2xl mb-10">Expert Online English • Portuguese • Academic Tutoring</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-8 text-[#0F766E]">About Fuentix Room</h2>
+      <p class="text-lg leading-relaxed max-w-3xl mx-auto">
+       Fuentix Room is a dynamic online learning platform dedicated to helping students succeed academically and communicate confidently across languages. Founded in 2026, we offer three core learning pathways designed to meet the needs of diverse learners.
+
+Our English programme (TEFL) is specially designed for non-English speakers who want to build strong communication skills for school, work, and everyday life. We focus on practical, interactive lessons that develop speaking, listening, reading, and writing in a supportive environment.
+
+In addition, we provide academic tutoring for Grades 4 to 11, helping students strengthen their understanding of key school subjects, improve performance, and gain confidence in their studies. Our tutoring is aligned with school curricula and tailored to each learner’s pace and goals.
+
+We also offer Portuguese classes for non-Portuguese speakers, ideal for beginners and intermediate learners who want to communicate effectively in real-life situations, whether for travel, school, or personal growth.
+
+At Fuentix, we believe that every student learns differently. That’s why our teaching approach is student-centered, engaging, and focused on real results. We are committed to creating a positive online learning experience where students feel supported, motivated, and empowered to succeed.
+
+Learn a language. Strengthen your knowledge. Unlock your future.
+      </p>
+    </div>
+  </section>
+
+  <!-- Classes -->
+  <section id="classes" class="py-20 bg-[#F5F0E6]">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 text-[#0F766E]">Our Classes</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-3xl shadow text-center">
+          <h3 class="text-2xl font-semibold mb-6">English Classes</h3>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfjawKlcGv0duMieTSNQUu75-eGa2HIROG7PqFb0scjQnLo3w/viewform" target="_blank" 
+             class="block w-full bg-[#0F766E] text-white py-4 rounded-2xl font-semibold">Register Now</a>
+        </div>
+        <div class="bg-white p-8 rounded-3xl shadow text-center">
+          <h3 class="text-2xl font-semibold mb-6">Portuguese Classes</h3>
+          <button onclick="showPortugueseModal()" class="block w-full bg-[#0F766E] text-white py-4 rounded-2xl font-semibold">Register Now</button>
+        </div>
+        <div class="bg-white p-8 rounded-3xl shadow text-center">
+          <h3 class="text-2xl font-semibold mb-6">Tutoring (Grades 4-11)</h3>
+          <button onclick="showTutoringSection()" class="block w-full bg-[#9F1239] text-white py-4 rounded-2xl font-semibold">Select Subjects & Register</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL Tutoring Subject Selection -->
+  <section id="tutoring-section" class="py-20 bg-white hidden">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 text-[#0F766E]">Select Your Grade & Subjects</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Grade 4 -->
+        <div class="subject-card bg-white p-6 rounded-3xl shadow">
+          <h3 class="text-xl font-semibold mb-4 text-[#0F766E]">Grade 4</h3>
+          <div class="space-y-3">
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Mathematics</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Natural Sciences & Technology</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Social Sciences</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Reading & Phonics</label>
+          </div>
+        </div>
+
+        <!-- Grade 5 -->
+        <div class="subject-card bg-white p-6 rounded-3xl shadow">
+          <h3 class="text-xl font-semibold mb-4 text-[#0F766E]">Grade 5</h3>
+          <div class="space-y-3">
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Mathematics</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Natural Sciences & Technology</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Social Sciences</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Reading & Phonics</label>
+          </div>
+        </div>
+
+        <!-- Grade 6 -->
+        <div class="subject-card bg-white p-6 rounded-3xl shadow">
+          <h3 class="text-xl font-semibold mb-4 text-[#0F766E]">Grade 6</h3>
+          <div class="space-y-3">
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Mathematics</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Natural Sciences & Technology</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Social Sciences</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Reading & Phonics</label>
+          </div>
+        </div>
+
+        <!-- Grade 7 -->
+        <div class="subject-card bg-white p-6 rounded-3xl shadow">
+          <h3 class="text-xl font-semibold mb-4 text-[#0F766E]">Grade 7</h3>
+          <div class="space-y-3">
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Mathematics</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Natural Sciences</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Social Sciences</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Technology</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Economic & Management Sciences (EMS)</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Life Orientation</label>
+          </div>
+        </div>
+
+        <!-- Grade 8 -->
+        <div class="subject-card bg-white p-6 rounded-3xl shadow">
+          <h3 class="text-xl font-semibold mb-4 text-[#0F766E]">Grade 8</h3>
+          <div class="space-y-3">
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Mathematics</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Natural Sciences</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Social Sciences</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Technology</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> EMS</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Life Orientation</label>
+          </div>
+        </div>
+
+        <!-- Grade 9 -->
+        <div class="subject-card bg-white p-6 rounded-3xl shadow">
+          <h3 class="text-xl font-semibold mb-4 text-[#0F766E]">Grade 9</h3>
+          <div class="space-y-3">
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Mathematics</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Natural Sciences</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Social Sciences</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Technology</label>
+          </div>
+        </div>
+
+        <!-- Grade 10 -->
+        <div class="subject-card bg-white p-6 rounded-3xl shadow">
+          <h3 class="text-xl font-semibold mb-4 text-[#0F766E]">Grade 10</h3>
+          <div class="space-y-3">
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Mathematics / Mathematical Literacy</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Physical Sciences</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Life Sciences</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Accounting</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Business Studies</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Economics</label>
+          </div>
+        </div>
+
+        <!-- Grade 11 -->
+        <div class="subject-card bg-white p-6 rounded-3xl shadow">
+          <h3 class="text-xl font-semibold mb-4 text-[#0F766E]">Grade 11</h3>
+          <div class="space-y-3">
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Mathematics / Mathematical Literacy</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Physical Sciences</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Life Sciences</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Accounting</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Business Studies</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Economics</label>
+            <label class="flex items-center gap-3"><input type="checkbox" class="w-5 h-5 accent-[#0F766E]"> Tourism</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-16">
+        <button onclick="showTutoringModal()" class="bg-[#9F1239] hover:bg-red-800 text-white px-16 py-5 rounded-2xl text-xl font-semibold">
+          Proceed to Registration
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20 bg-[#F5F0E6]">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Our Pricing</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="bg-white p-10 rounded-3xl">
+          <h3 class="text-2xl font-bold mb-8 text-center">Language Classes</h3>
+          <div class="space-y-6 text-lg">
+            <div class="flex justify-between"><span>English Classes</span><span class="font-bold">R 600 / month</span></div>
+            <div class="flex justify-between"><span>Portuguese Classes</span><span class="font-bold">R 800 / month</span></div>
+          </div>
+        </div>
+        <div class="bg-white p-10 rounded-3xl">
+          <h3 class="text-2xl font-bold mb-8 text-center">Tutoring Packages</h3>
+          <div class="space-y-6 text-lg">
+            <div class="flex justify-between"><span>1 Subject</span><span class="font-bold">R 900 / month</span></div>
+            <div class="flex justify-between"><span>2 Subjects</span><span class="font-bold">R 800 / month</span></div>
+            <div class="flex justify-between"><span>3 or more Subjects</span><span class="font-bold">R 700 / month</span></div>
+            <div class="pt-4 text-center font-semibold">Group Classes: R 800 per learner / month</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portuguese Modal -->
+  <div id="portugueseModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[100]">
+    <div class="bg-white rounded-3xl p-8 max-w-lg w-full mx-4 overflow-auto max-h-[90vh]">
+      <h2 class="text-3xl font-bold mb-6 text-center text-[#0F766E]">Portuguese Classes Registration</h2>
+      <form action="https://formsubmit.co/afro.ties.opp4@gmail.com" method="POST">
+        <input type="text" name="Full Name" placeholder="Full Name" class="w-full p-4 border rounded-2xl mb-4" required>
+        <input type="number" name="Age" placeholder="Age" class="w-full p-4 border rounded-2xl mb-4" required>
+        <input type="text" name="Nationality" placeholder="Nationality" class="w-full p-4 border rounded-2xl mb-4" required>
+        <input type="text" name="Home Language" placeholder="Home Language" class="w-full p-4 border rounded-2xl mb-4" required>
+        
+        <label class="block mb-3 font-medium">Current Portuguese Level</label>
+        <div class="space-y-2 mb-6">
+          <label><input type="radio" name="Level" value="No experience" required> No experience</label><br>
+          <label><input type="radio" name="Level" value="Beginner"> Beginner</label><br>
+          <label><input type="radio" name="Level" value="Intermediate"> Intermediate</label>
+        </div>
+
+        <textarea name="Reason" placeholder="Why do you want to learn Portuguese?" class="w-full p-4 border rounded-2xl mb-4" rows="3"></textarea>
+        <input type="tel" name="WhatsApp" placeholder="Phone Number (WhatsApp)" class="w-full p-4 border rounded-2xl mb-4" required>
+        <input type="email" name="Email" placeholder="Email Address" class="w-full p-4 border rounded-2xl mb-6" required>
+
+        <input type="hidden" name="_subject" value="New Portuguese Registration">
+        <button type="submit" class="w-full bg-[#0F766E] text-white py-4 rounded-2xl font-semibold">Submit Registration</button>
+      </form>
+      <button onclick="closeModals()" class="mt-4 w-full text-gray-500">Close</button>
+    </div>
+  </div>
+
+  <!-- Tutoring Modal -->
+  <div id="tutoringModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[100]">
+    <div class="bg-white rounded-3xl p-8 max-w-lg w-full mx-4 overflow-auto max-h-[90vh]">
+      <h2 class="text-3xl font-bold mb-6 text-center text-[#9F1239]">Tutoring Registration</h2>
+      <form action="https://formsubmit.co/afro.ties.opp4@gmail.com" method="POST">
+        <h3 class="font-semibold mb-3">Student Information</h3>
+        <input type="text" name="Student Full Name" placeholder="Full Name" class="w-full p-4 border rounded-2xl mb-4" required>
+        <input type="number" name="Student Age" placeholder="Age" class="w-full p-4 border rounded-2xl mb-4" required>
+        <input type="text" name="Current Grade" placeholder="Current Grade" class="w-full p-4 border rounded-2xl mb-4" required>
+        <input type="text" name="School" placeholder="School Currently Attending" class="w-full p-4 border rounded-2xl mb-6" required>
+
+        <h3 class="font-semibold mb-3">Parent/Guardian Details</h3>
+        <input type="text" name="Parent Name" placeholder="Parent/Guardian Full Name" class="w-full p-4 border rounded-2xl mb-4" required>
+        <input type="tel" name="Parent WhatsApp" placeholder="Contact Number (WhatsApp)" class="w-full p-4 border rounded-2xl mb-4" required>
+        <input type="email" name="Parent Email" placeholder="Email Address" class="w-full p-4 border rounded-2xl mb-6" required>
+
+        <input type="hidden" name="_subject" value="New Tutoring Registration">
+        <button type="submit" class="w-full bg-[#9F1239] text-white py-4 rounded-2xl font-semibold">Submit Registration</button>
+      </form>
+      <button onclick="closeModals()" class="mt-4 w-full text-gray-500">Close</button>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/27676974142" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-4xl shadow-xl z-50 hover:scale-110 transition">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    function showPortugueseModal() {
+      document.getElementById('portugueseModal').classList.remove('hidden');
+    }
+    function showTutoringModal() {
+      document.getElementById('tutoringModal').classList.remove('hidden');
+    }
+    function closeModals() {
+      document.getElementById('portugueseModal').classList.add('hidden');
+      document.getElementById('tutoringModal').classList.add('hidden');
+    }
+    function showTutoringSection() {
+      document.getElementById('tutoring-section').classList.toggle('hidden');
+      window.scrollTo({ top: document.getElementById('tutoring-section').offsetTop - 100, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
